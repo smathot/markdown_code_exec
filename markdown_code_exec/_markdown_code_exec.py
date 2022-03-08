@@ -7,6 +7,20 @@ PATTERN = r'^```\s*{(?P<attr>[. a-zA-Z0-9_]+)}\s*\n(?P<code>.*?)\n```\s*$'
 
 
 def parse_text(md):
+    """Takes a `str` containing markdown text, finds code blocks in the
+    markdown, executes these code blocks and captures the output, and then
+    embeds the captured output in the markdown.
+    
+    Parameters
+    ----------
+    md: str
+        The input markdown string
+        
+    Returns
+    -------
+    str
+        The compiled markdown string
+    """
     workspace = {}
     md_out = md
     offset = 0
@@ -43,6 +57,14 @@ def parse_text(md):
 
 
 def parse_file(src, dst):
+    """Takes a markdown input file, executes code blocks while capturing output
+    and writes the result to a new output file.
+    
+    src: str
+        The full path to the input file
+    dst: str
+        The full path to the output file
+    """
     if not os.path.isfile(src):
         raise ValueError('{} is not a file'.format(src))
     with open(src) as fd:
