@@ -5,13 +5,35 @@
 Copyright 2022 Sebastiaan Mathôt
 
 
-## Example usage
+## Function reference
 
-``` { .python capture }
-from markdown_code_exec import parse_file
-parse_file('input.md', 'output.md')
-```
+**<span style="color:purple">markdown&#95;code&#95;exec.parse&#95;text</span>_(md)_**
 
+
+Takes a `str` containing markdown text, finds code blocks in the
+markdown, executes these code blocks and captures the output, and then
+embeds the captured output in the markdown.
+
+
+#### Parameters
+* md: str :  The input markdown string
+
+#### Returns
+<b><i>str</i></b>  The compiled markdown string
+
+
+
+**<span style="color:purple">markdown&#95;code&#95;exec.parse&#95;file</span>_(src, dst)_**
+
+
+Takes a markdown input file, executes code blocks while capturing output
+and writes the result to a new output file.
+
+
+src: str
+    The full path to the input file
+dst: str
+    The full path to the output file
 
 ## License
 
