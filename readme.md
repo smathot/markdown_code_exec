@@ -4,6 +4,17 @@
 
 Copyright 2022 Sebastiaan Mathôt
 
+## Command-line usage
+
+usage: markdown_code_exec.py [-h] [-i INPUT] [-o OUTPUT]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        input markdown file
+  -o OUTPUT, --output OUTPUT
+                        output markdown file
+
 
 ## Function reference
 

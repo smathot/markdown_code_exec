@@ -4,6 +4,16 @@
 
 Copyright 2022 Sebastiaan Mathôt
 
+## Command-line usage
+
+``` { .python silent }
+import sys
+import subprocess
+p = subprocess.run([sys.executable, 'markdown_code_exec.py', '--help'],
+               capture_output=True, text=True)
+print(p.stdout)
+```
+
 
 ## Function reference
 
