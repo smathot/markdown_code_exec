@@ -1,0 +1,19 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+[project]
+name = "markdown_code_exec"
+authors = [
+    {name = "Sebastiaan Mathot", email = "s.mathot@cogsci.nl"},
+]
+readme = "readme.md"
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+requires-python = ">=3.5"
+dynamic = ["version", "description"]
+[project.scripts]
+markdown-code-exec = "markdown_code_exec._app:app"
+[project.urls]
+Documentation = "https://github.com/smathot/markdown_code_exec"
+Source = "https://github.com/smathot/markdown_code_exec"
